@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html id="main-html" lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dahawi Engineering Company</title>
+
+<style>
+:root {
+    --navy-blue:#1a2a44;
+    --gold-yellow:#ffcc00;
+    --brand-red:#e63946;
+    --light-gray:#f4f7f6;
+}
+
+/* التحكم في إظهار اللغات */
+[lang="ar"] .en-text{display:none!important;}
+[lang="en"] .ar-text{display:none!important;}
+
+body{
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    margin:0;
+    padding:0;
+    background-color:var(--light-gray);
+    color:#333;
+    line-height:1.6;
+}
+
+/* زر تبديل اللغة */
+.lang-switcher{
+    position:fixed;
+    top:15px;
+    left:15px;
+    background:var(--brand-red);
+    color:#fff;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    z-index:999;
+    transition:.3s;
+    border:0.5px solid var(--gold-yellow);
+}
+.lang-switcher:hover{
+    background:var(--navy-blue);
+    transform:scale(1.05);
+}
+
+/* الهيدر */
+header{
+    background:var(--navy-blue);
+    color:#fff;
+    padding:2rem 1rem;
+    text-align:center;
+    border-bottom:5px solid var(--gold-yellow);
+}
+
+.logo-container{margin-bottom:15px;}
+
+.logo-img{
+    max-width:150px;
+    height:auto;
+    border-radius:50%;
+    border:3px solid var(--gold-yellow);
+    background:#fff;
+    padding:5px;
+}
+
+.hero-title{color:var(--gold-yellow);margin:10px 0;font-size:2rem;}
+.hero-subtitle{font-size:1.1rem;opacity:.9;display:block;margin-bottom:10px;}
+
+.container{max-width:1100px;margin:auto;padding:20px;}
+
+h2{
+    color:var(--navy-blue);
+    margin-top:40px;
+}
+
+/* اتجاه العناوين حسب اللغة */
+[dir="ltr"] h2{
+    border-left:5px solid var(--brand-red);
+    padding-left:15px;
+    text-align:left;
+}
+[dir="rtl"] h2{
+    border-right:5px solid var(--brand-red);
+    padding-right:15px;
+    text-align:right;
+}
+
+/* اتجاه عناصر التواصل حسب اللغة */
+[dir="ltr"] .contact-item{
+    border-left:5px solid var(--brand-red);
+    border-right:none;
+    text-align:left;
+}
+[dir="rtl"] .contact-item{
+    border-right:5px solid var(--brand-red);
+    border-left:none;
+    text-align:right;
+}
+[dir="ltr"] .contact-item strong,
+[dir="ltr"] .contact-item span{
+    text-align:left;
+}
+[dir="rtl"] .contact-item strong,
+[dir="rtl"] .contact-item span{
+    text-align:right;
+}
+
+/* الشهادات */
+.certificates-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+    margin-top:25px;
+    -webkit-backdrop-filter:blur(10px);
+}
+
+.cert-card{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 7px rgba(0,1,0,0.3);
+    border:1.5px solid #ddd;
+    transition:.3s;
+}
+
+.cert-card:hover{
+    transform:translateY(-14px);
+    border-color:var(--gold-yellow);
+}
+
+.cert-img-placeholder{
+    width:100%;
+    height:220px;
+    background:#eee;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.cert-img-placeholder img{
+    max-width:100%;
+    max-height:100%;
+}
+
+/* التواصل */
+.contact-section{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    margin-top:50px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+    margin-top:20px;
+}
+
+footer{
+    background:var(--navy-blue);
+    color:#fff;
+    text-align:center;
+    padding:2rem;
+    margin-top:60px;
+}
+</style>
+</head>
+
+<body>
+
+<button class="lang-switcher" onclick="toggleLanguage()">
+<span class="ar-text">English</span>
+<span class="en-text">العربية</span>
+</button>
+
+<header>
+<div class="logo-container">
+<img src="https://i.ibb.co/k6cgp62F/logo.png" alt="Dahawi Engineering Logo" class="logo-img">
+</div>
+<h1 class="hero-title">Dahawi Engineering Company</h1>
+<span class="hero-subtitle">Integrated Energy & Electrical Infrastructure Solutions</span>
+</header>
+
+<div class="container">
+
+<!-- About Section -->
+<section id="about">
+<h2 class="en-text">About Us</h2>
+<h2 class="ar-text">من نحن</h2>
+
+<div class="en-text">
+<p><strong>Dahawi Engineering Company</strong> is an international company specialized in the execution, operation, and maintenance of energy and electrical infrastructure projects. The company operates in the construction of distribution substations, implementation of integrated electrical schemes, and maintenance of transmission and distribution network components, including towers, poles, transformers, cables, and medium-voltage switchgear.</p>
+</div>
+
+<div class="ar-text">
+<p><strong>شركة ضحوي الهندسية</strong> هي شركة عالمية متخصصة في تنفيذ وتشغيل وصيانة مشاريع الطاقة والبنية التحتية الكهربائية. تعمل الشركة في تشييد محطات التوزيع، وتنفيذ المخططات الكهربائية المتكاملة، وصيانة مكونات شبكات النقل والتوزيع، بما يشمل الأبراج، الأعمدة، المحولات، الكوابل، ومفاتيح الجهد المتوسط.</p>
+</div>
+</section>
+
+<!-- Certificates Section -->
+<section id="certificates">
+<h2 class="en-text">Certifications and Credentials</h2>
+<h2 class="ar-text">الشهادات و الإعتمادات</h2>
+
+<div class="certificates-grid">
+<!-- Card 1 -->
+<div class="cert-card">
+<div class="cert-img-placeholder"><a href="https://ibb.co/Kjv8KBHN"><img src="https://i.ibb.co/QFwxDhG8/cer-3.jpg" alt="cer-3"></a></div>
+<div class="cert-info" style="padding:15px;text-align:center;">
+<h3>PMP Certification لزم الاقي وواحدة بتاعت ادارة مشاريع</h3>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="cert-card">
+<div class="cert-img-placeholder"><a href="https://ibb.co/hxSY65LC"><img src="https://i.ibb.co/0pxs7NmQ/cer-1.jpg" alt="cer-1"></a></div>
+<div class="cert-info" style="padding:15px;text-align:center;">
+<h3>XXXXX</h3>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="cert-card">
+<div class="cert-img-placeholder"><a href="https://ibb.co/wrMDJ8Rn"><img src="https://i.ibb.co/4gPBsC7b/Dahawi-test-cer-full-page-0010.jpg" alt=""></a></div>
+<div class="cert-info" style="padding:15px;text-align:center;">
+<h3>B.Sc. In Electrical Engineering</h3>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="cert-card">
+<div class="cert-img-placeholder"><a href="https://ibb.co/hJPV8r0s"><img src="https://i.ibb.co/v67kzf91/Dahawi-test-cer-full-page-0008.jpg" alt=""></a></div>
+<div class="cert-info" style="padding:15px;text-align:center;">
+<h3>Master Degree</h3>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="cert-card">
+<div class="cert-img-placeholder"><a href="https://ibb.co/JjxGdwb5"><img src="https://i.ibb.co/nM3Y0NVz/cer-5.jpg" alt=""></a></div>
+<div class="cert-info" style="padding:15px;text-align:center;">
+<h3>Engineering Accreditation</h3>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="cert-card">
+<div class="cert-img-placeholder"><a href="https://ibb.co/nN7F8bCj"><img src="https://i.ibb.co/0RCxVctr/cer-4.jpg" alt=""></a></div>
+<div class="cert-info" style="padding:15px;text-align:center;">
+<h3>Membership لازم يجي فيها صورة تسجيل يوغندا</h3>
+</div>
+</div>
+<!-- Card 7 -->
+<div class="cert-card">
+<div class="cert-img-placeholder"><a href="https://ibb.co/Xr1NwXxB"><img src="https://i.ibb.co/ksjkdK2n/Dahawi-test-cer-full-page-0006.jpg" alt=""></a></div>
+<div class="cert-info" style="padding:15px;text-align:center;">
+<h3>TOT Certificate</h3>
+</div>
+</div>
+<!-- Card 8 -->
+<div class="cert-card">
+<div class="cert-img-placeholder">مكان صورة الشهادة 8</div>
+<div class="cert-info" style="padding:15px;text-align:center;">
+<h3 class="en-text">Engr. Zueelnoun Adam Dahawi</h3>
+<h3 class="ar-text">الباشمهندس/ ذو النون ضحـوي</h3>
+<h4>Founder</h4>
+</div>
+</div>
+<!-- Card 9 -->
+<div class="cert-card">
+<div class="cert-img-placeholder">مكان صورة الشهادة 9</div>
+<div class="cert-info" style="padding:15px;text-align:center;">
+<h3>View Our Profile</h3>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+<h2 class="en-text">Contact Info</h2>
+<h2 class="ar-text">معلومات التواصل</h2>
+
+<div class="contact-grid">
+<div class="contact-item">
+<strong class="en-text">📞Contact Us </strong>
+<strong class="ar-text">اتصل بنا 📞</strong>
+Sudan: +249 912188625<br>
+Uganda: +256 762460923<br>
+Email: Dahawi_Engineering_Company@yahoo.com
+</div>
+
+<div class="contact-item">
+<strong class="en-text">Sudan Office</strong>
+<strong class="ar-text">مكتب السـودان</strong>
+<span class="en-text">Office , 1st Floor, Faky Building, Moglad Center Market, Almoglad, Sudan</span>
+<span class="ar-text">مكتب 2 – الطابق الأول – عمارة فكي – سوق المجلد المركزي – المجلد – السودان</span>
+</div>
+
+<div class="contact-item">
+<strong class="en-text">Uganda Office</strong>
+<strong class="ar-text">مكتب يوغندا</strong>
+<span class="en-text">Office No.37, 3rd Floor, Ham Tower, Makarere</span>
+<span class="ar-text">مكتب رقم 37، الطابق الثالث، هام تاور، ماكيريري</span>
+</div>
+</div>
+</section>
+
+</div>
+
+<footer>
+<p class="en-text">&copy; 2026 Dahawi Engineering Company | All Rights Reserved</p>
+<p class="ar-text"> 2026 &copy;شركة ضحـوي الهندسية | جميع الحقوق محفوظة</p>
+</footer>
+
+<script>
+const htmlTag=document.getElementById('main-html');
+
+function toggleLanguage(){
+    const currentLang=htmlTag.getAttribute('lang');
+    if(currentLang==='ar'){setLanguage('en');}
+    else{setLanguage('ar');}
+}
+
+function setLanguage(lang){
+    if(lang==='ar'){
+        htmlTag.setAttribute('lang','ar');
+        htmlTag.setAttribute('dir','rtl');
+    }else{
+        htmlTag.setAttribute('lang','en');
+        htmlTag.setAttribute('dir','ltr');
+    }
+}
+
+// كشف لغة الجهاز تلقائيًا عند أول زيارة
+const userLang=navigator.language||navigator.userLanguage;
+if(userLang.startsWith('ar')){setLanguage('ar');}
+else{setLanguage('en');}
+</script>
+
+</body>
+</html>
